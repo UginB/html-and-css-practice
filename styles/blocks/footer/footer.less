@@ -1,13 +1,38 @@
 .footer {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	padding: 30px 15px 22px 15px;
 	background: #212122;
+
+	@media @screen-gt-s {
+		padding: 30px 0 22px 0;
+	}
+
+	&__logo {
+		display: none;
+
+		@media @screen-gt-m {
+			display: block;
+		}
+	}
+
+	&__wrapper {
+		@media @screen-gt-s {
+			width: 698px;
+		}
+
+		@media @screen-gt-m {
+			width: 930px;
+		}
+	}
+
 	&__divider {
 		margin: 30px 0 15px 0;
 		height: 1px;
 		background: #666666;
 	}
+
 	&__text{
 		font-family: 'Arial';
 		font-style: normal;
@@ -18,5 +43,14 @@
 		flex-direction: column;
 		color: #999999;
 		padding-right: 40px;
+	}
+
+	&__links-wrapper {
+		position: relative;
+		
+		@media @screen-gt-s {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 }

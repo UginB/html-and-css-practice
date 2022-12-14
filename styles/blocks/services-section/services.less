@@ -1,21 +1,41 @@
 .services {
-	display: flex;
-	flex-direction: column;
-	padding: 0 0 30px 15px;
+	padding-bottom: 30px;
 	background: #EEEEEE;
+
 	&__item {
 		display: flex;
 		align-items: center;
 		padding-top: 30px;
 		height: 40px;
-		width: 271px;
+
+		&_paddingRight {
+			padding-right: 10px;
+
+			@media @screen-gt-s {
+				padding-right: 38px;
+			}
+
+			@media @screen-gt-m {
+				padding-right: 85px;
+			}
+		}
 	}
+
 	&__img {
 		height: 40px;
 		margin-right: 20px;
+
+		@media @screen-gt-s {
+            margin-right: 10px;
+        }
+
+		@media @screen-gt-m {
+            margin-right: 30px;
+        }
 	}
+
 	&__text {
-		font-family: 'Arial';
+		font-family: 'Arial', sans-serif;
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
