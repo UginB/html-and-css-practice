@@ -36,6 +36,13 @@
     }
 }
 
+.column_m_show {
+	display: none;
+	@media @screen-gt-m {
+		display: block;
+	}
+}
+
 each(range(@column-count-s), {
     .column_s-@{value} {
         width: @column-width-s * @value;
